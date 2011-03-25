@@ -1,0 +1,3 @@
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = git://github.com/sjbach/lusty.git
