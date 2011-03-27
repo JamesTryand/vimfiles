@@ -31,3 +31,5 @@ set guifont=Consolas:h11
 au BufNewFile,BufRead *.ps1  setf ps1
 au BufNewFile,BufRead *.psm1 setf ps1
 au BufNewFile,BufRead *.config  setf xml
+
+nmap <silent> <c-n> :NERDTreeToggle<CR>
