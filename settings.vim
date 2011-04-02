@@ -1,17 +1,25 @@
 syntax on
-colorscheme torte
+scriptencoding utf-8
+colorscheme molokai
 set nocompatible "turning off compatibility with legacy vi"
 
-set autoindent
-set nostartofline       
+set nobomb
+set encoding=utf-8
+set fileencoding=utf-8
 
-set number             
-set scrolloff=4       
+set autoindent
+set nostartofline
+
+set number
+set scrolloff=4
 
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+set listchars=trail:·,precedes:«,extends:»,eol:¬,tab:▸\ 
+set list
 
 set nobackup
 set nowritebackup
@@ -28,8 +36,8 @@ set ignorecase
 set guifont=Consolas:h11
 
 " set custom file types I've configured
-au BufNewFile,BufRead *.ps1  setf ps1
-au BufNewFile,BufRead *.psm1 setf ps1
-au BufNewFile,BufRead *.config  setf xml
+autocmd BufNewFile,BufRead *.ps1  setf ps1
+autocmd BufNewFile,BufRead *.psm1 setf ps1
+autocmd BufNewFile,BufRead *.config  setf xml
 
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+nmap <silent> <c-n> :NERDTreeToggle<cr>
