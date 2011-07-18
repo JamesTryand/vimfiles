@@ -19,7 +19,8 @@ set shiftwidth=4
 set expandtab
 
 set listchars=trail:·,precedes:«,extends:»,eol:¬,tab:▸\ 
-set list
+set list "show invisible characters like tabstops and carraige returns
+set wildmode=list:longest "make tab completion complete with common chars
 
 set nobackup
 set nowritebackup
@@ -41,3 +42,9 @@ autocmd BufNewFile,BufRead *.psm1 setf ps1
 autocmd BufNewFile,BufRead *.config  setf xml
 
 nmap <silent> <c-n> :NERDTreeToggle<cr>
+
+set laststatus=2 
+if has("statusline") 
+        set statusline=%<%f\ %h%m%r%=%k[%{(&fenc\ ==\ \"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %-12.(%l,%c%V%)\ %P 
+endif 
+
