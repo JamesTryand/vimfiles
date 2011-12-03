@@ -1,3 +1,6 @@
 cmd.exe /C git submodule init
 cmd.exe /C git submodule update
-mklink ..\_vimrc %cd%\vimrc
+if exist ..\_vimrc ( 
+    del ..\_vimrc
+)
+mklink /H ..\_vimrc %cd%\vimrc

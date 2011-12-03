@@ -3,10 +3,11 @@
 "
 " Making an attempt clean and document my vimfile
 
-" Pathogen needs to be to be the first thing in here
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/vimfiles/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
 
 "----------------------------------------------------------
 " OS specific configuration
